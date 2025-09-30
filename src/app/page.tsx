@@ -3,9 +3,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
-  // function handleOnChange(e: string) {
-  //   setInputValue(e.target.value);
-  // }
+
   return (
     <div className="w-full h-screen rounded-md bg-[#F3F4F6] flex flex-col justify-center items-center">
       <div className="w-[420px] bg-[#FFFFFF] h-auto flex flex-col justify-center items-center rounded-md border shadow-[0_0_12px_0_rgba(0,0,0,0.25)]">
