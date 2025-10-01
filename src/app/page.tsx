@@ -1,9 +1,4 @@
-import {
-  HomePage,
-  HomePageSkeleton,
-  Task,
-  ThemeController,
-} from "@/components";
+import { HomePage, HomePageSkeleton } from "@/components";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -11,7 +6,6 @@ export default function Home() {
     <div>
       <Suspense fallback={<HomePageSkeleton />}>
         <HomePage />
-        <Task />
       </Suspense>
     </div>
   );
