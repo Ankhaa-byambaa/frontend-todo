@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Task } from "./Task";
 import { ThemeController } from "./ThemeController";
-
 export function HomePage() {
   const [newTask, setNewTask] = useState("");
   const [task, setTask] = useState("");
@@ -41,13 +40,13 @@ export function HomePage() {
           <p className="text-[#363636]">Powered by</p>
           <a
             href="https://pinecone.mn/"
-            className="text-pink-400 hover:scale-[1.05]"
+            className="text-pink-400 hover:scale-[1.05] text-6"
           >
             Pinecone academy
           </a>
         </div>
       </div>
-      <Task inputValue={`${inputValue}`} />
+      <Task newTaskValue={`${newTask}`} />
     </div>
   );
 }
