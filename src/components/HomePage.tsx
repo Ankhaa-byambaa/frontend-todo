@@ -1,11 +1,20 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Task } from "./Task";
 import { ThemeController } from "./ThemeController";
+
 export function HomePage() {
   const [newTask, setNewTask] = useState("");
-  const [task, setTask] = useState("");
+  const [hi, setHi] = useState("");
   const inputValue = "";
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/hi`)
+      .then((res) => res.json())
+      .then((data) => {
+        setHi(data);
+      });
+  }, []);
 
   return (
     <div className="w-full h-screen rounded-md bg-[#F3F4F6] flex flex-col justify-center items-center gap-10">
@@ -46,6 +55,7 @@ export function HomePage() {
           </a>
         </div>
       </div>
+
       <Task newTaskValue={`${newTask}`} />
     </div>
   );
